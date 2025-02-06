@@ -1,0 +1,103 @@
+//call function using event listener
+window.addEventListener('load',() => {    
+    //create a const variable
+    const params = (new URL(document.location)).searchParams;
+    const ChristianStatus = params.get('ChristianStatus');
+    const memberTitle = params.get('memberTitle');
+    const FirstName = params.get('FirstName');
+    const MiddleName = params.get('MiddleName');
+    const LastName = params.get('LastName');
+    const StreetAddr = params.get('StreetAddr');
+    const AptNum = params.get('AptNum');
+    const City = params.get('City');
+    const State = params.get('State');
+    const ZipCode = params.get('ZipCode');
+    const MemberEmail = params.get('MemberEmail');
+    const MobileNumber = params.get('MobileNumber');
+    const AltNumber = params.get('AltNumber');
+    const CanPublishNumber = params.get('CanPublishNumber');
+    const ReceiveEmail = params.get('ReceiveEmail');
+    const ReceiveText = params.get('ReceiveText');
+    const MemberDOB = params.get('MemberDOB');
+    const MaritalStatus = params.get('MaritalStatus');
+    const SpouseName = params.get('SpouseName');
+    const SpouseNumber = params.get('SpouseNumber');
+    const WedAnniv = params.get('WedAnniv');
+    const EmergencyName = params.get('EmergencyName');
+    const EmergencyNumber = params.get('EmergencyNumber');
+    const EmergencyRelation = params.get('EmergencyRelation');
+    const PrevChurch = params.get('PrevChurch');
+    const PrevChurchAddr = params.get('PrevChurchAddr');
+    const Employed = params.get('Employed');
+    const WorkPlace = params.get('WorkPlace');
+    const JobTitle = params.get('JobTitle');
+    const WorkNumber = params.get('WorkNumber');
+    const Comments = params.get('Comments');
+    const AddFamName1 = params.get('AddFamName1');
+    const AddFamDOB1 = params.get('AddFamDOB1');
+    const AddFamGender1 = params.get('AddFamGender1');
+    const AddFamSaved1 = params.get('AddFamSaved1');
+    const AddFamRelated1 = params.get('AddFamRelated1');
+    const AddFamName2 = params.get('AddFamName2');
+    const AddFamDOB2 = params.get('AddFamDOB2');
+    const AddFamGender2 = params.get('AddFamGender2');
+    const AddFamSaved2 = params.get('AddFamSaved2');
+    const AddFamRelated2 = params.get('AddFamRelated2');
+    const AddFamName3 = params.get('AddFamName3');
+    const AddFamDOB3 = params.get('AddFamDOB3');
+    const AddFamGender3 = params.get('AddFamGender3');
+    const AddFamSaved3 = params.get('AddFamSaved3');
+    const AddFamRelated3 = params.get('AddFamRelated3');
+
+    document.getElementById("result-ChristianStatus").innerHTML = ChristianStatus;
+    document.getElementById("result-memberTitle").innerHTML = memberTitle;
+    document.getElementById("result-FirstName").innerHTML = FirstName;
+    document.getElementById("result-MiddleName").innerHTML = MiddleName;
+    document.getElementById("result-LastName").innerHTML = LastName;
+    document.getElementById("result-StreetAddr").innerHTML = StreetAddr;
+    document.getElementById("result-AptNum").innerHTML = AptNum;
+    document.getElementById("result-City").innerHTML = City;
+    document.getElementById("result-State").innerHTML = State;
+    document.getElementById("result-ZipCode").innerHTML = ZipCode;
+    document.getElementById("result-MemberEmail").innerHTML = MemberEmail;
+    document.getElementById("result-MobileNumber").innerHTML = MobileNumber;
+    document.getElementById("result-AltNumber").innerHTML = AltNumber;
+    document.getElementById("result-CanPublishNumber").innerHTML = CanPublishNumber;
+    document.getElementById("result-ReceiveEmail").innerHTML = ReceiveEmail;
+    document.getElementById("result-ReceiveText").innerHTML = ReceiveText;
+    document.getElementById("result-MemberDOB").innerHTML = MemberDOB;
+    document.getElementById("result-MaritalStatus").innerHTML = MaritalStatus;
+    document.getElementById("result-SpouseName").innerHTML = SpouseName;
+    document.getElementById("result-SpouseNumber").innerHTML = SpouseNumber;
+    document.getElementById("result-WedAnniv").innerHTML = WedAnniv;
+    document.getElementById("result-EmergencyName").innerHTML = EmergencyName;
+    document.getElementById("result-EmergencyNumber").innerHTML = EmergencyNumber;
+    document.getElementById("result-EmergencyRelation").innerHTML = EmergencyRelation;
+    document.getElementById("result-PrevChurch").innerHTML = PrevChurch;
+    document.getElementById("result-PrevChurchAddr").innerHTML = PrevChurchAddr;
+    document.getElementById("result-Employed").innerHTML = Employed;
+    document.getElementById("result-WorkPlace").innerHTML = WorkPlace;
+    document.getElementById("result-JobTitle").innerHTML = JobTitle;
+    document.getElementById("result-WorkNumber").innerHTML = WorkNumber;
+    document.getElementById("result-Comments").innerHTML = Comments;
+    document.getElementById("result-AddFamName1").innerHTML = AddFamName1;
+    document.getElementById("result-AddFamDOB1").innerHTML = AddFamDOB1;
+    document.getElementById("result-AddFamGender1").innerHTML = AddFamGender1;
+    document.getElementById("result-AddFamSaved1").innerHTML = AddFamSaved1;
+    document.getElementById("result-AddFamRelated1").innerHTML = AddFamRelated1;
+    document.getElementById("result-AddFamName2").innerHTML = AddFamName2;
+    document.getElementById("result-AddFamDOB2").innerHTML = AddFamDOB2;
+    document.getElementById("result-AddFamGender2").innerHTML = AddFamGender2;
+    document.getElementById("result-AddFamSaved2").innerHTML = AddFamSaved2;
+    document.getElementById("result-AddFamRelated2").innerHTML = AddFamRelated2;
+    document.getElementById("result-AddFamName3").innerHTML = AddFamName3;
+    document.getElementById("result-AddFamDOB3").innerHTML = AddFamDOB3;
+    document.getElementById("result-AddFamGender3").innerHTML = AddFamGender3;
+    document.getElementById("result-AddFamSaved3").innerHTML = AddFamSaved3;
+    document.getElementById("result-AddFamRelated3").innerHTML = AddFamRelated3;
+
+})
+ 
+function returnBack(){
+    window.history.back();
+}
