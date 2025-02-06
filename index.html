@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bethel_membership_form.css" />
 	<script type="text/javascript" src="scripts/external.js"></script>
-	<!-- Version 02042025.10:35 -->
+	<!-- Version 02062025.13:48 -->
 </head>
 <body>
 
-	<form method="POST" action="https://formsubmit.co/info@bethelwilmg.org">
+	<form method="POST" action="https://formsubmit.co/7236f9e9132ee77d99d4f2350055f9ff">
 	<!-- Honeypot -->
 	<input type="text" name="_honey" style="display: none;" />
 
@@ -18,7 +18,7 @@
 	<input type="hidden" name="_captcha" value="false" />
 
 	<!-- Post Submit Success Page -->
-	<input type="hidden" name="_next" value="https://bamecw.github.io/memberform/thanks.html" />
+	<input type="hidden" name="_next" value="https://rramson.github.io/bamememberform/thanks.html" />
 
 		<div class="container-fluid">
 			<div id="rcorner2label" class="row">
@@ -33,6 +33,10 @@
 				<label class="form-check-label" for="NewMember">New Member <i>(already baptized)</i></label>
 				<br />
 				
+				<input type="radio" class="form-check-input" id="NewMember" name="Christian&nbsp;Status" value="New&nbsp;Member&nbsp;Needs&nbsp;Baptism" required />
+				<label class="form-check-label" for="NewMember">New Member <i>(not baptized)</i></label>
+				<br />
+
 				<input type="radio" class="form-check-input" id="NewConvert" name="Christian&nbsp;Status" value="New&nbsp;Convert" required />
 				<label class="form-check-label" for="NewConvert">New Convert <i>(never been baptized)</i></label>
 				<br />
@@ -43,6 +47,17 @@
 				
 				<input type="radio" class="form-check-input" id="WatchCare" name="Christian&nbsp;Status" value="Watch&nbsp;Care" required />
 				<label class="form-check-label" for="WatchCare">Watch Care</label>
+				<br>
+				<br>
+				<label class="form-check-label" for="AttendService"><b>Which service do you attend?: *</b></label>
+				<br />
+				<input type="radio" class="form-check-input" id="ServiceA" name="ServiceAttends" value="ServiceAttends" required />
+				<label class="form-check-label" for="ServiceAttends">7:00 am</i></label>
+				<br />
+				<input type="radio" class="form-check-input" id="ServiceA" name="ServiceAttends" value="ServiceAttends" required />
+				<label class="form-check-label" for="ServiceAttends">9:00 am</i></label>
+				<br />
+
 			</div>
 			<br />
 				
@@ -115,15 +130,15 @@
 			<div id="rcorners2" class="form-check col-sm">		
 				<label class="form-label" for="MemberEmail"><b>Email:(name@example.com)</b></label>
 				<br />
-				<input type='text' class="form-control" id="email" name='email' />
+				<input type='text' class="form-control" id="email" name='email' required />
 				<br /><br />
 				<label class="form-label" for="MobileNumber"><b>Mobile Number:</b></label>
 				<br />
-				<input type="text" class="form-control" id="MobileNumber" name="Mobile&nbsp;Number" placeholder="3025551111" oninput="format_phone(this);" maxLength="12" minLength="10" />
+				<input type="text" class="form-control" id="MobileNumber" name="Mobile&nbsp;Number" placeholder="302-555-5555" oninput="format_phone(this);" maxLength="12" minLength="10" required />
 				<br />			
 				<label class="form-label" for="AltNumber"><b>Alternate Number:</b></label>
 				<br />
-				<input type="text" class="form-control" id="AltNumber" name="Alternate&nbsp;Number" placeholder="3025551111" oninput="format_phone(this);" maxLength="12" minLength="10" />
+				<input type="text" class="form-control" id="AltNumber" name="Alternate&nbsp;Number" placeholder="302-111-1111" oninput="format_phone(this);" maxLength="12" minLength="10" />
 				<br /><br />
 
 				<label class="form-label" for="NumPublish">Can we publish your number in the Church's phone directory?</label><br />
