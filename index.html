@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bethel_membership_form.css" />
 	<script type="text/javascript" src="scripts/external.js"></script>
-	<!-- Version 02072025.07:32 -->
+	<!-- Version 02072025.10:20 -->
 </head>
 <body>
 
@@ -30,15 +30,11 @@
 				<br />
 				
 				<input type="radio" class="form-check-input" id="NewMember" name="Christian&nbsp;Status" value="New&nbsp;Member" required />
-				<label class="form-check-label" for="NewMember">New Member <i>(already baptized)</i></label>
-				<br />
-				
-				<input type="radio" class="form-check-input" id="NewMember" name="Christian&nbsp;Status" value="New&nbsp;Member&nbsp;Needs&nbsp;Baptism" required />
-				<label class="form-check-label" for="NewMember">New Member <i>(not baptized)</i></label>
+				<label class="form-check-label" for="NewMember">New Member</label>
 				<br />
 
 				<input type="radio" class="form-check-input" id="NewConvert" name="Christian&nbsp;Status" value="New&nbsp;Convert" required />
-				<label class="form-check-label" for="NewConvert">New Convert <i>(never been baptized)</i></label>
+				<label class="form-check-label" for="NewConvert">New Convert</label>
 				<br />
 				
 				<input type="radio" class="form-check-input" id="MethodistTransfer" name="Christian&nbsp;Status" value="Methodist&nbsp;Transfer" required />
@@ -49,6 +45,19 @@
 				<label class="form-check-label" for="WatchCare">Watch Care</label>
 				<br>
 				<br>
+				
+				<label class="form-check-label" for="AttendService"><b>Have you been baptized *</b></label>
+				<br />
+				
+				<input type="radio" class="form-check-input" id="baptized" name="baptized" value="yesbaptized" required />
+				<label class="form-check-label" for="ServiceAttends">Yes</i></label>
+				<br />
+				
+				<input type="radio" class="form-check-input" id="baptized" name="baptized" value="nobaptized" required />
+				<label class="form-check-label" for="ServiceAttends">No</i></label>
+				<br />
+				<br />
+
 				<label class="form-check-label" for="AttendService"><b>Which service do you attend?: *</b></label>
 				<br />
 				<input type="radio" class="form-check-input" id="ServiceA" name="ServiceAttends" value="ServiceAttends" required />
