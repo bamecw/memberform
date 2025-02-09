@@ -3,10 +3,10 @@
 <head>
 	<title>Bethel AME Church Membership Form</title>
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bethel_membership_form.css" />
 	<script type="text/javascript" src="scripts/external.js"></script>
-	<!-- Version 02072025.17:39 -->
+	<!-- Version 02082025.05:32 -->
 </head>
 <body>
 
@@ -25,14 +25,14 @@
 				Welcome to Bethel
 			</div>
 
-			<div id="rcorners2" class="form-check col-sm">		
+			<div id="rcorners2" class="form-check col-sm">
+				<!-- Membership Status -->
 				<label class="form-check-label" for="ChristianStatus"><b>Select your status: *</b></label>
 				<br />
 				
 				<input type="radio" class="form-check-input" id="NewMember" name="Christian&nbsp;Status" value="New&nbsp;Member" required />
 				<label class="form-check-label" for="NewMember">New Member</label>
-				<br />
-
+				
 				<input type="radio" class="form-check-input" id="NewConvert" name="Christian&nbsp;Status" value="New&nbsp;Convert" required />
 				<label class="form-check-label" for="NewConvert">New Convert</label>
 				<br />
@@ -40,12 +40,13 @@
 				<input type="radio" class="form-check-input" id="MethodistTransfer" name="Christian&nbsp;Status" value="Methodist&nbsp;Transfer" required />
 				<label class="form-check-label" for="MethodistTransfer">Methodist Transfer <i>(with certificate of transfer)</i></label>
 				<br />
-				
+
 				<input type="radio" class="form-check-input" id="WatchCare" name="Christian&nbsp;Status" value="Watch&nbsp;Care" required />
 				<label class="form-check-label" for="WatchCare">Watch Care</label>
 				<br>
 				<br>
 				
+				<!-- Baptismal Question -->
 				<label class="form-check-label" for="baptized"><b>Have you been baptized *</b></label>
 				<br />
 				
@@ -58,6 +59,7 @@
 				<br />
 				<br />
 
+				<!-- Choose Which Service You Attend -->
 				<label class="form-check-label" for="AttendService"><b>Which service do you attend?: *</b></label>
 				<br />
 				<input type="radio" class="form-check-input" id="ServiceA" name="ServiceAttends" value="ServiceAttends" required />
@@ -78,23 +80,23 @@
 				<label class="form-check-label" for="memberTitle"><b>Select your title: *</b></label>
 				<br />
 				
-				<input type="radio" class="form-check-input" id="RV" name="Member&nbsp;Title" value="RV" required />
+				<input type="radio" class="form-check-input" id="RV" name="Member&nbsp;Title" value="Rev" required />
 				<label class="form-check-label" for="REV">Reverend</label>&Tab;
 				
-				<input type="radio" class="form-check-input" id="EV" name="Member&nbsp;Title" value="EV" required />
+				<input type="radio" class="form-check-input" id="EV" name="Member&nbsp;Title" value="Evang" required />
 				<label class="form-check-label" for="EV">Evangelist</label>&Tab;
 
-				<input type="radio" class="form-check-input" id="DR" name="Member&nbsp;Title" value="DR" required />
+				<input type="radio" class="form-check-input" id="DR" name="Member&nbsp;Title" value="Dr" required />
 				<label class="form-check-label" for="DR">Doctor (MD, PhD, etc.)</label>
 				<br />
 
-				<input type="radio" class="form-check-input" id="MR" name="Member&nbsp;Title" value="MR" required />
+				<input type="radio" class="form-check-input" id="MR" name="Member&nbsp;Title" value="Mr" required />
 				<label class="form-check-label" for="MR">Mr.</label>&Tab;
 				
-				<input type="radio" class="form-check-input" id="MRS" name="Member&nbsp;Title" value="MRS" required />
+				<input type="radio" class="form-check-input" id="MRS" name="Member&nbsp;Title" value="Mrs" required />
 				<label class="form-check-label" for="MRS">Mrs.</label>&Tab;
 				
-				<input type="radio" class="form-check-input" id="MS" name="Member&nbsp;Title" value="MS" required />
+				<input type="radio" class="form-check-input" id="MS" name="Member&nbsp;Title" value="Ms" required />
 				<label class="form-check-label" for="MS">Ms.</label>
 				<br />
 				<br />
@@ -137,11 +139,18 @@
 			</div>
 
 			<div id="rcorners2" class="form-check col-sm">		
-				<label class="form-label" for="MemberEmail"><b>Email:(name@example.com)</b></label>
+				<label class="form-label" for="MemberEmail"><b>Email:(name@example.com) *</b></label>
 				<br />
 				<input type='text' class="form-control" id="email" name='email' required />
 				<br /><br />
-				<label class="form-label" for="MobileNumber"><b>Mobile Number:</b></label>
+				<label class="form-label" for="ReceiveEmail">Would you like to receive email information regarding church activities?</label><br />
+				<input type="radio" class="form-check-input" id="ReceiveEmail" name="Receive&nbsp;Email" value="Yes">
+				<label class="form-label" for="Yes">Yes</label>&Tab;
+				<input type="radio" class="form-check-input" id="ReceiveEmail" name="Receive&nbsp;Email" value="No">
+				<label class="form-label" for="No">No</label>
+				<br /><br /><br />
+
+				<label class="form-label" for="MobileNumber"><b>Mobile Number: *</b></label>
 				<br />
 				<input type="text" class="form-control" id="MobileNumber" name="Mobile&nbsp;Number" placeholder="302-555-5555" oninput="format_phone(this);" maxLength="12" minLength="10" required />
 				<br />			
@@ -155,14 +164,7 @@
 				<label class="form-label" for="Yes">Yes</label>&Tab;
 				<input type="radio" class="form-check-input" id="NumPublish" name="Can&nbsp;Publish" value="No">
 				<label class="form-label" for="No">No</label>
-				<br /><br />
-					
-				<label class="form-label" for="ReceiveEmail">Would you like to receive email information regarding church activities?</label><br />
-				<input type="radio" class="form-check-input" id="ReceiveEmail" name="Receive&nbsp;Email" value="Yes">
-				<label class="form-label" for="Yes">Yes</label>&Tab;
-				<input type="radio" class="form-check-input" id="ReceiveEmail" name="Receive&nbsp;Email" value="No">
-				<label class="form-label" for="No">No</label>
-				<br /><br />
+				<br /><br />			
 					
 				<label class="form-label" for="ReceiveText">Would you like to receive text messages regarding church activities?</label><br />
 				<input type="radio" id="ReceiveText" class="form-check-input" name="Receive&nbsp;Text" value="Yes">
@@ -174,7 +176,7 @@
 				
 				
 			<div id="rcorner2label" class="row">
-				Additional Information:
+				Additional Information
 			</div>
 				
 				
@@ -267,7 +269,7 @@
 				<br />
 				<label class="form-label" for="WorkNumber">Work Phone Number:</label>
 				<br />		
-				<input type="text" class="form-control" id="WorkNumber" name="Work&nbsp;Number" placeholder="3025551111" oninput="format_phone(this);" maxLength="12" minLength="10" />
+				<input type="text" class="form-control" id="WorkNumber" name="Work&nbsp;Number" placeholder="302-555-1111" oninput="format_phone(this);" maxLength="12" minLength="10" />
 				<br />
 				<label class="form-label" for="Comments">Comments, any major skills, etc.:</label>
 				<br />
@@ -276,7 +278,7 @@
 			<br />
 				
 			<div id="rcorner2label" class="row">
-				Additional Household Members:
+				Additional Household Members
 			</div>
 
 			<div id="rcorners2" class="form-check col-sm">
@@ -314,7 +316,7 @@
 			<br />
 
 			<div id="rcorner2label" class="row">
-				Additional Household Members:
+				Additional Household Members
 			</div>
 
 			<div id="rcorners2" class="form-check col-sm">
@@ -352,7 +354,7 @@
 			<br />
 
 			<div id="rcorner2label" class="row">
-				Additional Household Members:
+				Additional Household Members
 			</div>
 
 			<div id="rcorners2" class="form-check col-sm">
@@ -391,7 +393,7 @@
 			<br />
 				
 			<div id="rcorner2label" class="row">
-				Social Media Acknowledgement:
+				Social Media Acknowledgement
 			</div>
 
 			<div id="rcorners2" class="form-check col-sm">
