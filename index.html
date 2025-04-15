@@ -1,425 +1,544 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-	<title>Bethel AME Church Membership Form</title>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/bethel_membership_form.css" />
-	<script type="text/javascript" src="scripts/external.js"></script>
-	<!-- Version 02152025.18:18 -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <title>Bethel AMEC Membership Form</title>
+    <!-- Updated April 15, 2025 17:50 -->
 </head>
-<body>
 
-	<form method="POST" action="https://formsubmit.co/ccbf1d6a81c2d63f273887e6c9a64715">
-	<!-- Honeypot -->
-	<input type="text" name="_honey" style="display: none;" />
+<body class="bg-light">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-sm-6 bg-white m-auto">
+                <div id="rcorner2label">
+                    <h2 class="text-center pb-3">Welcome to Bethel AMEC</h2>                    
+                </div>
+                <p class="text-center text-muted lead">Please complete the form below.</p>           
+                
+                <!-- Form Start -->
+                <form method="post" class="needs-validation" action="https://formsubmit.co/7236f9e9132ee77d99d4f2350055f9ff" novalidate>
 
-	<!-- Disable Captcha -->
-	<input type="hidden" name="_captcha" value="false" />
+                <!-- Honeypot -->
+	            <input type="text" name="_honey" style="display: none;" />
 
-	<!-- Post Submit Success Page -->
-	<input type="hidden" name="_next" value="https://bamecw.github.io/memberform/thanks.html" />
+	            <!-- Disable Captcha -->
+                <input type="hidden" name="_captcha" value="false" />
 
-		<div class="container-fluid">
-			<div id="rcorner2label" class="row">
-				Welcome to Bethel
-			</div>
+                <!-- Post Submit Success Page -->
+                <input type="hidden" name="_next" value="https://rramson.github.io/bamememberform/thanks.html" />
+                
+                    <!-- Membership Status -->
+                    <label for="ChristianStatus" class="col-form-label"><p class="thick">Member Status:</p></label>
+                    
+                    <div class="row mb-3">
+                        <div>
+                            <select class="form-select" id="ChristianStatus" required>
+                                <option value="" disabled selected>Select Christian status *</option>
+                                <option value="New&nbsp;Member">New Member</option>
+                                <option value="New&nbsp;Convert">New Convert</option>
+                                <option value="Methodist&nbsp;Transfer">Methodist Transfer</option>
+                                <option value="Watch&nbsp;Care">Watch Care</option>
+                                <option value="Return&nbsp;Member">Returning Bethel Member</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid membership status.
+                            </div>
+                        </div>                        
+                    </div>
 
-			<div id="rcorners2" class="form-check col-sm">
-				<!-- Membership Status -->
-				<label class="form-check-label" for="ChristianStatus"><b>Select your status: *</b></label>
-				<br />
-				
-				<input type="radio" class="form-check-input" id="NewMember" name="Christian&nbsp;Status" value="New&nbsp;Member" required />
-				<label class="form-check-label" for="NewMember">New Member</label>
-				
-				<input type="radio" class="form-check-input" id="NewConvert" name="Christian&nbsp;Status" value="New&nbsp;Convert" required />
-				<label class="form-check-label" for="NewConvert">New Convert</label>
-				<br />
-				
-				<input type="radio" class="form-check-input" id="MethodistTransfer" name="Christian&nbsp;Status" value="Methodist&nbsp;Transfer" required />
-				<label class="form-check-label" for="MethodistTransfer">Methodist Transfer <i>(with certificate of transfer)</i></label>
-				<br />
+                    <p class="text-center text-muted">If you are transfering from another Methodist church,
+                        do you have a letter of transfer from your previous church?
+                    </p>
+                    <div class="row mb-3">
+                        <div>
+                            <select class="form-select" id="TransferLetter">
+                                <option value="" disabled selected>Methodist Transfer Certificate?</option>
+                                <option value="YesTransferLetter">Yes</option>
+                                <option value="NoTransferLetter">No</option>
+                                <option value="Not&nbsp;Applicable">Not Applicable</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Choose Which Service You Attend -->
+				    <label for="AttendService" class="col-form-label">
+                    <p class="thick">Which Service Do You Attend?</p>
+                    </label>
 
-				<input type="radio" class="form-check-input" id="WatchCare" name="Christian&nbsp;Status" value="Watch&nbsp;Care" required />
-				<label class="form-check-label" for="WatchCare">Watch Care</label>
-				<br>
-				<br>
-				
-				<!-- Baptismal Question -->
-				<label class="form-check-label" for="baptized"><b>Have you been baptized *</b></label>
-				<br />
-				
-				<input type="radio" class="form-check-input" id="baptized" name="baptized" value="yesbaptized" required />
-				<label class="form-check-label" for="ServiceAttends">Yes</i></label>
-				
-				
-				<input type="radio" class="form-check-input" id="baptized" name="baptized" value="nobaptized" required />
-				<label class="form-check-label" for="ServiceAttends">No</i></label>
-				<br />
-				<br />
+                    <div class="row mb-3">
+                        <div>
+                            <select class="form-select" id="AttendService" required>
+                                <option value="" disabled selected>Select service you attend *</option>
+                                <option value="SevenAM">7:00 AM</option>
+                                <option value="NineAM">9:00 AM</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid service time.
+                            </div>
+                        </div>
+                    </div>
 
-				<!-- Choose Which Service You Attend -->
-				<label class="form-check-label" for="AttendService"><b>Which service do you attend?: *</b></label>
-				<br />
-				<input type="radio" class="form-check-input" id="ServiceA" name="ServiceAttends" value="ServiceAttends" required />
-				<label class="form-check-label" for="ServiceAttends">7:00 am</i></label>
-				
-				<input type="radio" class="form-check-input" id="ServiceA" name="ServiceAttends" value="ServiceAttends" required />
-				<label class="form-check-label" for="ServiceAttends">9:00 am</i></label>
-				<br />
+                    <!-- Baptismal Question -->
+				    <label for="baptized" class="col-form-label">
+                        <p class="thick">Have you been baptized?</p>
+                    </label>
 
-			</div>
-			<br />
-				
-			<div id="rcorner2label" class="row">
-				Tell Us Your Name:
-			</div>
+                    <div class="row mb-3">
+                        <div>
+                            <select class="form-select" id="baptized" required>
+                                <option value="" disabled selected>Select baptismal status *</option>
+                                <option value="yesbaptized">Baptized</option>
+                                <option value="nobaptized">Not Baptized</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid baptismal status.
+                            </div>
+                        </div>
+                    </div>
 
-			<div id="rcorners2" class="form-check col-sm">		
-				<label class="form-check-label" for="memberTitle"><b>Select your title: *</b></label>
-				<br />
-				
-				<input type="radio" class="form-check-input" id="RV" name="Member&nbsp;Title" value="Rev" required />
-				<label class="form-check-label" for="REV">Reverend</label>&Tab;
-				
-				<input type="radio" class="form-check-input" id="EV" name="Member&nbsp;Title" value="Evang" required />
-				<label class="form-check-label" for="EV">Evangelist</label>&Tab;
-				<br />
+                    <!-- Personal Information Section -->
+                    <label for="PersonalInfo" class="col-form-label">
+                        <h3 class="text-center">Personal Information: </h3>
+                    </label>
 
-				<input type="radio" class="form-check-input" id="DR" name="Member&nbsp;Title" value="Dr" required />
-				<label class="form-check-label" for="DR">Doctor (MD, PhD, etc.)</label>
-				<br />
+                    <!-- Membership Title -->
+                    <div class="row mb-3">
+                        <div>
+                            <select class="form-select" id="MembershipTitle" required>
+                                <option value="" disabled selected>Select your title: *</option>
+                                <option value="Mr.">Mr.</option>
+                                <option value="Mrs.">Mrs.</option>
+                                <option value="Ms.">Ms.</option>
+                                <option value="Rev.">Rev.</option>
+                                <option value="Evang.">Evangelist</option>
+                                <option value="Dr.">Dr. (MD, PhD, etc)</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid title.
+                            </div>
+                        </div>
+                    </div>
 
-				<input type="radio" class="form-check-input" id="MR" name="Member&nbsp;Title" value="Mr" required />
-				<label class="form-check-label" for="MR">Mr.</label>&Tab;
-				
-				<input type="radio" class="form-check-input" id="MRS" name="Member&nbsp;Title" value="Mrs" required />
-				<label class="form-check-label" for="MRS">Mrs.</label>&Tab;
-				
-				<input type="radio" class="form-check-input" id="MS" name="Member&nbsp;Title" value="Ms" required />
-				<label class="form-check-label" for="MS">Ms.</label>
-				<br />
-				<br />
-						
-				<label class="form-label" for="FirstName">First Name <strong>*</strong> </label><br />
-				<input type="text" class="form-control" id="FirstName" name="First&nbsp;Name" value="" required minlength="1" maxlength="29" size="30" /><br />
-				
-				<label class="form-label" for="MiddleName">Middle Name <strong>*</strong></label><br />
-				<input type="text" class="form-control" id="MiddleName" name="Middle&nbsp;Name" value="" required minlength="1" maxlength="25" size="30" /><br />
-				
-				<label class="form-label" for="LastName">Last Name <strong>*</strong></label><br />
-				<input type="text" class="form-control" id="LastName" name="Last&nbsp;Name" value="" required minlength="1" maxlength="29" size="30" /><br />
-			</div>
-			<br />
-				
-			<div id="rcorner2label" class="row">
-				Address:
-			</div>
+                    <!-- Gather Name Info  -->
+                    <div class="row mb-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-user"></i></span>
+                            <input type="text" class="form-control" placeholder="First Name *" id="FirstName" name="First&nbsp;Name" minlength="1" maxlength="29" size="30" required />
+                            <div class="invalid-feedback">
+                                Please enter a valid first name.
+                            </div>
+                        </div>    
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-user"></i></span>
+                            <input type="text" class="form-control" placeholder="Middle Name" id="MiddleName" name="Middle&nbsp;Name" minlength="1" maxlength="25" size="30" />
+                            <div class="invalid-feedback">
+                                Please enter a valid middle name.
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-user"></i></span>
+                            <input type="text" class="form-control" placeholder="Last Name *" id="LastName" name="Last&nbsp;Name" minlength="1" maxlength="25" size="30" required />
+                            <div class="invalid-feedback">
+                                Please enter a valid last name.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Address Information -->
+                    <div class="row mt-3 mb-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-home"></i></span>
+                            <input type="text" class="form-control" placeholder="Street Address" id="StreetAddr" name="Street&nbsp;Address" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-home"></i></span>
+                            <input type="text" class="form-control" placeholder="Apt Number" id="AptNum" name="Apt&nbsp;Number" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-home"></i></span>
+                            <input type="text" class="form-control" placeholder="City" id="City" name="City" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-home"></i></span>
+                            <select class="form-select" id="State" required>
+                                <option value="" disabled selected>State</option>
+                                <option value="DE">Delaware</option>
+                                <option value="PA">Pennsylvania</option>
+                                <option value="MD">Maryland</option>
+                                <option value="NJ">New Jersey</option>
 
-			<div id="rcorners2" class="form-check col-sm">
-				<label class="form-label" for="StreetAddr">Street Address</label><br />
-				<input type="text" class="form-control" id="StreetAddr" name="Street&nbsp;Address" value=""><br />
-					
-				<label class="form-label" for="AptNum">Apt Number</label><br />
-				<input type="text" class="form-control" id="AptNum" name="Apt&nbsp;Number" value=""><br />
-					
-				<label class="form-label" for="City">City</label><br />
-				<input type="text" class="form-control" id="City" name="City" value=""><br />
-					
-				<label class="form-label" for="State">State</label><br />
-				<input type="text" class="form-control" id="State" name="State" value="" placeholder="DE" minlength="2" maxlength="2" /><br />
-					
-				<label class="form-label" for="ZipCode">Zip Code</label><br />
-				<input type="text" class="form-control" id="ZipCode" name="Zip&nbsp;Code" value="" minlength="5" maxlength="5" />
-			</div>
-			<br />
-				
-			<div id="rcorner2label" class="row">
-				Contact Information:
-			</div>
+                                <option value=""></option>
+                                <option value="AL">Alabama</option>
+                                <option value="AK">Alaska</option>
+                                <option value="AZ">Arizona</option>
+                                <option value="AR">Arkansas</option>
+                                <option value="CA">California</option>
+                                <option value="CO">Colorado</option>
+                                <option value="CT">Connecticut</option>
+                                <option value="DC">District Of Columbia</option>
+                                <option value="FL">Florida</option>
+                                <option value="GA">Georgia</option>
+                                <option value="HI">Hawaii</option>
+                                <option value="ID">Idaho</option>
+                                <option value="IL">Illinois</option>
+                                <option value="IN">Indiana</option>
+                                <option value="IA">Iowa</option>
+                                <option value="KS">Kansas</option>
+                                <option value="KY">Kentucky</option>
+                                <option value="LA">Louisiana</option>
+                                <option value="ME">Maine</option>
+                                <option value="MA">Massachusetts</option>
+                                <option value="MI">Michigan</option>
+                                <option value="MN">Minnesota</option>
+                                <option value="MS">Mississippi</option>
+                                <option value="MO">Missouri</option>
+                                <option value="MT">Montana</option>
+                                <option value="NE">Nebraska</option>
+                                <option value="NV">Nevada</option>
+                                <option value="NH">New Hampshire</option>
+                                <option value="NM">New Mexico</option>
+                                <option value="NY">New York</option>
+                                <option value="NC">North Carolina</option>
+                                <option value="ND">North Dakota</option>
+                                <option value="OH">Ohio</option>
+                                <option value="OK">Oklahoma</option>
+                                <option value="OR">Oregon</option>
+                                <option value="PA">Pennsylvania</option>
+                                <option value="RI">Rhode Island</option>
+                                <option value="SC">South Carolina</option>
+                                <option value="SD">South Dakota</option>
+                                <option value="TN">Tennessee</option>
+                                <option value="TX">Texas</option>
+                                <option value="UT">Utah</option>
+                                <option value="VT">Vermont</option>
+                                <option value="VA">Virginia</option>
+                                <option value="WA">Washington</option>
+                                <option value="WV">West Virginia</option>
+                                <option value="WI">Wisconsin</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AS">American Samoa</option>
+                                <option value="GU">Guam</option>
+                                <option value="MP">Northern Mariana Islands</option>
+                                <option value="PR">Puerto Rico</option>
+                                <option value="UM">United States Minor Outlying Islands</option>
+                                <option value="VI">Virgin Islands</option>
+                                <option value="AA">Armed Forces Americas</option>
+                                <option value="AP">Armed Forces Pacific</option>
+                                <option value="AE">Armed Forces Others</option>
+                            </select>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-home"></i></span>
+                            <input type="text" class="form-control" placeholder="Zip Code" id="ZipCode" name="Zip&nbsp;Code" minlength="5" maxlength="5" />
+                    </div>
 
-			<div id="rcorners2" class="form-check col-sm">		
-				<label class="form-label" for="MemberEmail"><b>Email:(name@example.com) *</b></label>
-				<br />
-				<input type='text' class="form-control" id="email" name='email' required />
-				<br /><br />
-				<label class="form-label" for="ReceiveEmail">Would you like to receive email information regarding church activities?</label><br />
-				<input type="radio" class="form-check-input" id="ReceiveEmail" name="Receive&nbsp;Email" value="Yes">
-				<label class="form-label" for="Yes">Yes</label>&Tab;
-				<input type="radio" class="form-check-input" id="ReceiveEmail" name="Receive&nbsp;Email" value="No">
-				<label class="form-label" for="No">No</label>
-				<br /><br /><br />
+                    <!-- Contact Email Information -->
+                    <div class="row mt-3 mb-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                            <input type="text" class="form-control" placeholder="Email *" id="email" name='email' required />
+                            <div class="invalid-feedback">
+                                Please enter a valid email address.
+                            </div>
+                        </div>
+                    </div>
 
-				<label class="form-label" for="MobileNumber"><b>Mobile Number: *</b></label>
-				<br />
-				<input type="text" class="form-control" id="MobileNumber" name="Mobile&nbsp;Number" placeholder="302-555-5555" oninput="format_phone(this);" maxLength="12" minLength="10" required />
-				<br />			
-				<label class="form-label" for="AltNumber"><b>Alternate Number:</b></label>
-				<br />
-				<input type="text" class="form-control" id="AltNumber" name="Alternate&nbsp;Number" placeholder="302-111-1111" oninput="format_phone(this);" maxLength="12" minLength="10" />
-				<br /><br />
+                    <!-- Opt In or Out Question 1 -->
+				    <label for="ReceiveEmail" class="col-form-label">
+                        <p class="thick">Would you like to receive email information regarding church activities?</p>
+                    </label>
+                    <div class="row mb-3">
+                        <div>
+                            <select class="form-select" id="ReceiveEmail">
+                                <option value="" disabled selected>Receive Emails?</option>
+                                <option value="YesEmail">Yes</option>
+                                <option value="NoEmail">No</option>
+                            </select>
+                        </div>
+                    </div>
 
-				<label class="form-label" for="NumPublish">Can we publish your number in the Church's phone directory?</label><br />
-				<input type="radio" class="form-check-input" id="NumPublish" name="Can&nbsp;Publish" value="Yes">
-				<label class="form-label" for="Yes">Yes</label>&Tab;
-				<input type="radio" class="form-check-input" id="NumPublish" name="Can&nbsp;Publish" value="No">
-				<label class="form-label" for="No">No</label>
-				<br /><br />			
-					
-				<label class="form-label" for="ReceiveText">Would you like to receive text messages regarding church activities?</label><br />
-				<input type="radio" id="ReceiveText" class="form-check-input" name="Receive&nbsp;Text" value="Yes">
-				<label class="form-label" for="Yes">Yes</label>&Tab;
-				<input type="radio" id="ReceiveText" class="form-check-input" name="Receive&nbsp;Text" value="No">
-				<label class="form-label" for="No">No</label><br /><br />		
-			</div>
-			<br />
-				
-				
-			<div id="rcorner2label" class="row">
-				Additional Information
-			</div>
-				
-				
-			<div id="rcorners2" class="form-check col-sm">					
-				<label class="form-label" for="MemberDOB"><b>Birth Date: *</b></label><br />
-				<input type="date" class="form-control" id="MemberDOB" name="Member&nbsp;DOB" required />
-				<br /><br />
-				
-				<label class="form-label" for="MaritalStatus"><b>Marital Status:</b></label>
-				<br />
-				<select class="form-select" id="MaritalStatus" name="Marital&nbsp;Status" size="1" required>
-					<option value="Single">Single</option>
-					<option value="Married">Married</option>
-					<option value="Widow">Widow</option>
-					<option value="Divorced">Divorced</option>
-				</select>
-				<br /><br />
-				
-				<label class="form-label" for="SpouseName="><b>Spouse Name:</b></label>
-				<br />
-				<input type="text" class="form-control" id="SpouseName" name="Spouse&nbsp;Name" value="" />
-				<br />
-					
-				<label class="form-label" for="SpouseNumber"><b>Spouse Phone Number:</b></label>
-				<br />			
-				<input type="text" class="form-control" id="SpouseNumber" name="Spouse&nbsp;Number" placeholder="302-555-1111" oninput="format_phone(this);" maxLength="12" minLength="10" />
-				<br /><br />
+                    <!-- Contact Phone Information -->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text"><i class="fa fa-phone"></i></span>
+                        <input type="text" class="form-control" placeholder="Mobile Phone Number *" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" id="PhoneID1" name="Mobile&nbsp;Phone&nbsp;Number" minlength="10" maxlength="14" required />
+                        <div class="invalid-feedback">
+                            Please enter a valid mobile phone number.
+                        </div>
+                    </div>
 
-				<label class="form-label" for="WedAnniv"><b>Wedding Anniversary:</b></label><br />
-				<input type="date" class="form-control" id="WedAnniv" name="Wedding&nbsp;Anniversary" />
-			</div>
-			<br />		
-				
-			<div id="rcorner2label" class="row">
-				Emergency Contact Information:
-			</div>
-								
-			<div id="rcorners2" class="form-check col-sm">
-				<b>Who can we contact in case of an emergency? *</b>
-				<br />
-				<br />
-				<label class="form-label" for="EmergencyName">Full Name: <strong>*</strong></label>
-				<br />
-				<input type="text" class="form-control" id="EmergencyName" name="Emergency&nbsp;Name" value="" required />
-				<br />
-					
-				<label class="form-label" for="EmergencyNumber">Phone Number: <strong>*</strong></label>
-				<br />			
-				<input type="text" class="form-control" id="EmergencyNumber" name="Emergency&nbsp;Number" placeholder="302-555-1111" oninput="format_phone(this);" maxLength="12" minLength="10" required />
-				<br />
+                    <!-- Contact Alternate Phone Information -->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text"><i class="fa fa-phone"></i></span>
+                        <input type="text" class="form-control" placeholder="Alternate Phone Number" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" id="PhoneID2" name="Alt&nbsp;Phone&nbsp;Number" minlength="10" maxlength="14" />
+                    </div>
+                    <!-- Opt In or Out Question 2 -->
+				    <label for="NumPublish" class="col-form-label">
+                        <p class="thick">Can we publish your number in the Church's phone directory?</p>
+                    </label>
+                    <div class="row mb-3">
+                        <div>
+                            <select class="form-select" id="NumPublish">
+                                <option value="" disabled selected>Consent to publish phone number</option>
+                                <option value="Yes" id="NumPublish" name="Can&nbsp;Publish">Yes</option>
+                                <option value="No" id="NumPublish" name="Can&nbsp;Publish">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Opt In or Out Question 3 -->
+				    <label for="ReceiveText" class="col-form-label">
+                        <p class="thick">Would you like to receive text messages regarding church activities?</p>
+                    </label>
+                    <div class="row mb-3">
+                        <div>
+                            <select class="form-select" id="ReceiveText">
+                                <option value="" disabled selected>Consent to receive text messages</option>
+                                <option value="Yes" id="ReceiveText" name="Receive&nbsp;Text">Yes</option>
+                                <option value="No" id="ReceiveText" name="Receive&nbsp;Text">No</option>
+                            </select>
+                        </div>
+                    </div>
 
-				<label class="form-label" for="EmergencyRelation">Relationship: <strong>*</strong></label>
-				<br />
-				<input type="text" class="form-control" id="EmergencyRelation" name="Emergency&nbsp;Relationship" value="" required />
-			</div>
-			<br />
-				
-			<div id="rcorner2label" class="row">
-				Optional Information:
-			</div>
-				
-			<div id="rcorners2" class="form-check col-sm">
-				<label class="form-label" for="PrevChurch">Previous Church:</label>
-				<br />
-				<input type="text" class="form-control" id="PrevChurch" name="Previous&nbsp;Church" value="" />
-				<br />
-				<label class="form-label" for="PrevChurchAddr">Previous Church Location (City & State):</label>
-				<br />
-				<input type="text" class="form-control" id="PrevChurchAddr" name="Previous&nbsp;Church&nbsp;Address" value="" />
-				<br />
-				<br />
-				
-				<!-- Employment status -->
-				<label class="form-label" for="WorkStatus">Are you employed?</label>
-				<br />
-				<input type="radio" class="form-check-input" name="Employed" value="Yes" />
-				<label class="form-label" for="Yes">Yes</label>&Tab;
-				<input type="radio" class="form-check-input" name="Employed" value="No" />
-				<label class="form-label" for="No">No</label>
-				<br />
-				<br />
-				
-				<label class="form-label" for="WorkPlace">Place of Employment:</label>
-				<br />
-				<input type="text" class="form-control" id="WorkPlace" name="Work&nbsp;Place" value="" />
-				<br />
-				<label class="form-label" for="JobTitle">Job Title:</label>
-				<br />
-				<input type="text" class="form-control" id="JobTitle" name="Job&nbsp;Title" value="" />
-				<br />
-				<label class="form-label" for="WorkNumber">Work Phone Number:</label>
-				<br />		
-				<input type="text" class="form-control" id="WorkNumber" name="Work&nbsp;Number" placeholder="302-555-1111" oninput="format_phone(this);" maxLength="12" minLength="10" />
-				<br />
-				<label class="form-label" for="Comments">Comments, any major skills, etc.:</label>
-				<br />
-				<input type="text" class="form-control" id="Comments" name="Comments" value="" />
-			</div>
-			<br />
-				
-			<div id="rcorner2label" class="row">
-				Additional Household Members
-			</div>
+                    <!-- Date of Birth -->
+                    <div class="row mb-3">
+                        <label for="DOB" class="col-form-label"><p class="thick">Date of Birth:</p></label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                            <input type="date" class="form-control" placeholder="Date of Birth *" id="MemberDOB" name="Member&nbsp;DOB" required />
+                            <div class="invalid-feedback">
+                                Please enter a valid date of birth.
+                            </div>
+                        </div>
+                    </div>
 
-			<div id="rcorners2" class="form-check col-sm">
-				<label class="form-label" for="AddFamName1">Full Name:</label>
-				<br />	
-				<input type="text" class="form-control" id="AddFamName1" name="Additional&nbsp;Family&nbsp;Name1" value="" />
-				<br />
-				<br />
-					
-				<label class="form-label" for="AddFamDOB1">Date of Birth</label>
-				<input type="date" class="form-control" id="AddFamDOB1" name="Additional&nbsp;Family&nbsp;DOB1" value="" />
-				<br />
-				<br />
+                    <!-- Marital Status -->
+                    <label for="MaritalStatus" class="col-form-label"><p class="thick">Marital Status:</p></label>
+                    <div class="row mb-3">
+                        <div>
+                            <select class="form-select" id="MaritalStatus" required>
+                                <option value="" disabled selected>Select your marital status *</option>
+                                <option value="Single">Single</option>
+                                <option value="Married">Married</option>
+                                <option value="Divorced">Divorced</option>
+                                <option value="Widowed">Widowed</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid marital status.
+                            </div>
+                        </div>
+                    </div>
 
-				<label class="form-label" for="AddFamGender1">Gender</label>
-				<input type="radio" id="AddFamGender1" name="Additional&nbsp;Family&nbsp;Gender1" value="Male" />
-				<label class="form-label" for="Male">Male</label>&Tab;
-				<input type="radio" id="AddFamGender1" name="Additional&nbsp;Family&nbsp;Gender1" value="Female" />
-				<label class="form-label" for="Female">Female</label>
-				<br />
-				<br />
+                    <!-- Spouse Information -->
+                    <label for="SpouseInfo" class="col-form-label"><p class="thick">Spouse Information:</p></label>
+                    <div class="row mb-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-user"></i></span>
+                            <input type="text" class="form-control" placeholder="Spouse First & Last Name" id="SpouseFullName" name="Spouse&nbsp;Full&nbsp;Name" minlength="1" maxlength="49" size="50" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-phone"></i></span>
+                            <input type="text" class="form-control" placeholder="Spouse Phone Number" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" id="PhoneID3" name="Spouse&nbsp;Phone&nbsp;Number" minlength="10" maxlength="14" />
+                        </div>
+                        <label for="DOB" class="col-form-label"><p class="thick">Wedding Anniversary:</p></label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                            <input type="date" class="form-control" placeholder="Wedding Anniversary" id="WedAnniv" name="Wedding&nbsp;Anniversary" />
+                        </div>
+                    </div>
+                    
+                        
+                    <!-- Emergency Contact Information Section -->
+                    <label for="EmergencyContact" class="col-form-label"><h3>Emergency Contact Information:</h3></label>
+                    <div class="row mb-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-user"></i></span>
+                            <input type="text" class="form-control" placeholder="Emergency Contact Full Name *" id="EmergContactFirstName" name="Emerg&nbsp;Contact&nbsp;First&nbsp;Name" minlength="1" maxlength="50" required />
+                            <div class="invalid-feedback">
+                                Please enter a valid emergency contact name.
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-phone"></i></span>
+                            <input type="text" class="form-control" placeholder="Emergency Contact Phone Number *" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"  id="PhoneID4" name="Emerg&nbsp;Contact&nbsp;Phone&nbsp;Number" minlength="10" maxlength="14" required />
+                            <div class="invalid-feedback">
+                                Please enter a valid emergency contact phone number.
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-pencil"></i></span>
+                            <input type="text" class="form-control" placeholder="Emergency Contact Relationship *" id="EmergencyRelation" name="Emergency&nbsp;Relationship" required />
+                            <div class="invalid-feedback">
+                                Please enter a valid emergency contact relationship.
+                            </div>
+                        </div>
+                    </div>
 
-				<label class="form-label" for="AddFamSaved1">Saved?</label>
-				<input type="radio" id="AddFamSaved1" name="Additional&nbsp;Family&nbsp;Member&nbsp;Saved1" value="Yes" />
-				<label class="form-label" for="Yes">Yes</label>&Tab;
-				<input type="radio" id="AddFamSaved1" name="Additional&nbsp;Family&nbsp;Member&nbsp;Saved1" value="No" />
-				<label class="form-label" for="No">No</label>
-				<br />
-				<br />
+                    <!-- Optional Information -->
+                    <label for="OptionalInfo" class="col-form-label"><h3>Optional Information:</h3></label>
+                    <div class="row mb-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-pencil"></i></span>
+                            <input type="text" class="form-control" placeholder="Previous Church" id="PrevChurch" name="Previous&nbsp;Church" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-pencil"></i></span>
+                            <input type="text" class="form-control" placeholder="Previous Church City & State" id="PrevChurchAddr" name="Previous&nbsp;Church&nbsp;Address" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-briefcase"></i></span>
+                            <input type="text" class="form-control" placeholder="Occupation / Job Title" id="Occupation" name="Occupation" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-briefcase"></i></span>
+                            <input type="text" class="form-control" placeholder="Employer Name" id="EmployerName" name="Employer&nbsp;Name" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-phone"></i></span>
+                            <input type="text" class="form-control" placeholder="Work Phone Number" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" id="PhoneID5" name="Work&nbsp;Phone&nbsp;Number" minlength="10" maxlength="14" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-pencil"></i></span>
+                            <input type="text" class="form-control" placeholder="Skills / Talents" id="Skills" name="Skills" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-pencil"></i></span>
+                            <input type="text" class="form-control" placeholder="Spiritual Gifts" id="SpiritualGifts" name="Spiritual&nbsp;Gifts" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-pencil"></i></span>
+                            <input type="text" class="form-control" placeholder="Ministry Interests" id="MinistryInterests" name="Ministry&nbsp;Interests" />
+                        </div>
+                    </div>
+                    
+                    <!-- Additional Household Information 1 -->
+                    <label for="HouseholdInfo" class="col-form-label"><h3>Additional Household Information:</h3></label>
+                    <p class="">First Household Member (optional)</p>
+                    <div class="row mb-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-user"></i></span>
+                            <input type="text" class="form-control" placeholder="Household Member Full Name" id="HouseholdFirstName1" name="Household&nbsp;First&nbsp;Name1" minlength="1" maxlength="50" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-pencil"></i></span>
+                            <input type="text" class="form-control" placeholder="Household Member Relationship" id="HouseholdRelation" name="Household&nbsp;Relationship1" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                            <input type="date" class="form-control" placeholder="Household Member Date of Birth" id="HouseholdDOB" name="Household&nbsp;DOB1" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-venus-mars"></i></span>&nbsp;&nbsp;
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="AddFamGender1" name="Additional&nbsp;Family&nbsp;Gender1" value="Male" />
+				                <label class="form-check-label" for="Male">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+				                <input class="form-check-input" type="radio" id="AddFamGender1" name="Additional&nbsp;Family&nbsp;Gender1" value="Female" />
+				                <label class="form-check-label" for="Female">Female</label>
+                            </div>
+                        </div>
+                    </div>
 
-				<label class="form-label" for="AddFamRelated1">Relationship to You?</label>
-				<br />
-				<input type="text" class="form-control" id="AddFamRelated1" name="How&nbsp;Related1" value="" />
-				<br />
-			</div>
-			<br />
+                    <!-- Additional Household Information 2 -->
+                    <p class="">Second Household Member (optional)</p>
+                    <div class="row mb-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-user"></i></span>
+                            <input type="text" class="form-control" placeholder="Household Member Full Name" id="HouseholdFirstName2" name="Household&nbsp;First&nbsp;Name2" minlength="1" maxlength="50" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-pencil"></i></span>
+                            <input type="text" class="form-control" placeholder="Household Member Relationship" id="HouseholdRelation2" name="Household&nbsp;Relationship2" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                            <input type="date" class="form-control" placeholder="Household Member Date of Birth" id="HouseholdDOB2" name="Household&nbsp;DOB2" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-venus-mars"></i></span>&nbsp;&nbsp;
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="AddFamGender2" name="Additional&nbsp;Family&nbsp;Gender2" value="Male" />
+				                <label class="form-check-label" for="Male">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+				                <input class="form-check-input" type="radio" id="AddFamGender2" name="Additional&nbsp;Family&nbsp;Gender2" value="Female" />
+				                <label class="form-check-label" for="Female">Female</label>
+                            </div>
+                        </div>
+                    </div>
 
-			<div id="rcorner2label" class="row">
-				Additional Household Members
-			</div>
+                    <!-- Additional Household Information 3 -->
+                    <p class="">Third Household Member (optional)</p>
+                    <div class="row mb-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-user"></i></span>
+                            <input type="text" class="form-control" placeholder="3rd Household Member Full Name" id="HouseholdFirstName3" name="Household&nbsp;First&nbsp;Name3" minlength="1" maxlength="50" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-pencil"></i></span>
+                            <input type="text" class="form-control" placeholder="Household Member Relationship" id="HouseholdRelation3" name="Household&nbsp;Relationship3" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                            <input type="date" class="form-control" placeholder="Household Member Date of Birth" id="HouseholdDOB3" name="Household&nbsp;DOB3" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-venus-mars"></i></span>&nbsp;&nbsp;
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="AddFamGender3" name="Additional&nbsp;Family&nbsp;Gender3" value="Male" />
+				                <label class="form-check-label" for="Male">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+				                <input class="form-check-input" type="radio" id="AddFamGender3" name="Additional&nbsp;Family&nbsp;Gender3" value="Female" />
+				                <label class="form-check-label" for="Female">Female</label>
+                            </div>
+                        </div>
+                    </div>
 
-			<div id="rcorners2" class="form-check col-sm">
-				<label class="form-label" for="AddFamName2">Full Name:</label>
-				<br />	
-				<input type="text" class="form-control" id="AddFamName2" name="Additional&nbsp;Family&nbsp;Name2" value="" />
-				<br />
-				<br />
-					
-				<label class="form-label" for="AddFamDOB2">Date of Birth</label>
-				<input type="date" class="form-control" id="AddFamDOB2" name="Additional&nbsp;Family&nbsp;DOB2" value="" />
-				<br />
-				<br />
+                    <!-- Social Media Acknowledgement -->
+                    <div class="row mb-3">
+                    <label for="SocialMedia" class="col-form-label"><h3 class="thick">Social Media Acknowledgement:</h3></label>
+                        <p class="wrap">
+                        By clicking the submit button below, you hereby authorize and consent to the use of your image by 
+                        Bethel AME Church in Wilmington, DE to be posted publicly on Bethel's social media platforms. 
+                        <br /><br />
+                        This includes Bethel AME Church's social media accounts, i.e.: YouTube channel, Facebook, Instagram, 
+                        X (formely Twitter), internal and external Bethel electronics, print publication and websites.
+                        <br /><br />
+                        This authorization is irrevocable, and waives all rights, claims, and demands against the AME 
+                        Church in connection with or arising out of the reproduction, publication or other use of 
+                        photograph or other physical images of you.
+                        </p>
+                    </div>
+                
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-success mb-3 btn-lg" onclick="validateEmail(document.form1.Member&nbspEmail.value)">Submit</button>
+                    <button type="reset" class="btn btn-danger btn-sm">Reset</button>
+                <!-- Form Close -->
+                </form>
+            </div>
+        </div>
+        <!-- footer section -->
+        <footer class="container" >
+            <div class="text-center">
+                <p>&copy; 2025 Bethel AME Church, Wilmington, DE</p>
+                <p>All rights reserved.</p>
+            </div>
+            <div class="socials text-center">
+                <a href="https://www.bethelwilmington.org/" target="_blank" title="Bethel AME Church" class="socials-item"><i class="bi bi-house me-2"></i></a>
+                <a href="https://www.facebook.com/BethelAMEwilm" target="_blank" title="Facebook" class="socials-item"><i class="bi bi-facebook me-2"></i></a>
+                <a href="https://twitter.com/BethelAmeWilm" target="_blank" title="Twitter" class="socials-item"><i class="bi bi-twitter me-2"></i></a>
+                <a href="https://www.instagram.com/bethelamewilm/" target="_blank" title="Instagram" class="socials-item"><i class="bi bi-instagram me-2"></i></a>
+                <a href="https://www.youtube.com/channel/UCM1Dk9mpPWaj29Wjsrwrd-g" target="_blank" title="YouTube" class="socials-item"><i class="bi bi-youtube me-2"></i></a>
+            </div>
+        </footer>
+    </div>    
 
-				<label class="form-label" for="AddFamGender2">Gender</label>
-				<input type="radio" id="AddFamGender2" name="Additional&nbsp;Family&nbsp;Gender2" value="Male" />
-				<label class="form-label" for="Male">Male</label>&Tab;
-				<input type="radio" id="AddFamGender2" name="Additional&nbsp;Family&nbsp;Gender2" value="Female"/>
-				<label class="form-label" for="Female">Female</label>
-				<br />
-				<br />
-
-				<label class="form-label" for="AddFamSaved2">Saved?</label>
-				<input type="radio" id="AddFamSaved2" name="Additional&nbsp;Family&nbsp;Member&nbsp;Saved2" value="Yes" />
-				<label class="form-label" for="Yes">Yes</label>&Tab;
-				<input type="radio" id="AddFamSaved2" name="Additional&nbsp;Family&nbsp;Member&nbsp;Saved2" value="No" />
-				<label class="form-label" for="No">No</label>
-				<br />
-				<br />
-
-				<label class="form-label" for="AddFamRelated2">Relationship to You?</label>
-				<br />
-				<input type="text" class="form-control" id="AddFamRelated2" name="How&nbsp;Related2" value="" />
-				<br />
-			</div>
-			<br />
-
-			<div id="rcorner2label" class="row">
-				Additional Household Members
-			</div>
-
-			<div id="rcorners2" class="form-check col-sm">
-				<label class="form-label" for="AddFamName3">Full Name:</label>
-				<br />	
-				<input type="text" class="form-control" id="AddFamName3" name="Additional&nbsp;Family&nbsp;Name3" value="" />
-				<br />
-				<br />
-					
-				<label class="form-label" for="AddFamDOB3">Date of Birth</label>
-				<input type="date" class="form-control" id="AddFamDOB3" name="Additional&nbsp;Family&nbsp;DOB3" value="" />
-				<br />
-				<br />
-
-				<label class="form-label" for="AddFamGender3">Gender</label>
-				<input type="radio" id="AddFamGender3" name="Additional&nbsp;Family&nbsp;Gender3" value="Male" />
-				<label class="form-label" for="Male">Male</label>&Tab;
-				<input type="radio" id="AddFamGender3" name="Additional&nbsp;Family&nbsp;Gender3" value="Female" />
-				<label class="form-label" for="Female">Female</label>
-				<br />
-				<br />
-
-				<label class="form-label" for="AddFamSaved3">Saved?</label>
-				<input type="radio" id="AddFamSaved3" name="Additional&nbsp;Family&nbsp;Member&nbsp;Saved3" value="Yes" />
-				<label class="form-label" for="Yes">Yes</label>&Tab;
-				<input type="radio" id="AddFamSaved3" name="Additional&nbsp;Family&nbsp;Member&nbsp;Saved3" value="No" />
-				<label class="form-label" for="No">No</label>
-				<br />
-				<br />
-
-				<label class="form-label" for="AddFamRelated3">Relationship to You?</label>
-				<br />
-				<input type="text" class="form-control" id="AddFamRelated3" name="How&nbsp;Related3" value="" />
-				<br />
-			</div>
-			<br />
-				
-			<div id="rcorner2label" class="row">
-				Social Media Acknowledgement
-			</div>
-
-			<div id="rcorners2" class="form-check col-sm">
-				<label class="form-label" for="SMAck" class="wrap">				
-					By clicking the submit button below, you hereby authorize and consent to the use of your image by 
-					Bethel AME Church in Wilmington, DE to be posted publicly on Bethel's social media platforms. 
-					<br /><br />
-					This includes Bethel AME Church's social media accounts, i.e.: YouTube channel, Facebook, Instagram, 
-					X (formely Twitter), internal and external Bethel electronics, print publication and websites.
-					<br /><br />
-					This authorization is irrevocable, and waives all rights, claims, and demands against the AME 
-					Church in connection with or arising out of the reproduction, publication or other use of 
-					photograph or other physical images of you.
-				</label>
-				<br />				
-			</div>
-
-			<br />
-			<button type="submit" class="btn btn-success" onclick="validateEmail(document.form1.Member&nbspEmail.value)">Submit</button>
-		</div>
-	</form>
-
-	<!-- Bootstrap JS Bundle with Popper -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="scripts/external.js"></script>
 </body>
 </html>
