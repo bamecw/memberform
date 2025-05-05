@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <title>Bethel AMEC Membership Form</title>
-    <!-- Updated April 30, 2025 09:00 -->
+    <!-- Updated May 04, 2025 20:33 -->
 </head>
 
 <body class="bg-light">
@@ -33,41 +33,10 @@
                     <!-- Post Submit Success Page -->
                     <input type="hidden" name="_next" value="https://bamecw.github.io/memberform/thanks.html">
                     
-                    <!-- Membership Status -->
-                    <div class="row mb-3">
-                        <label for="ChristianStatus" class="col-form-label fs-4 fw-bold">What is your Christian Status? *</label>
-                        <div>
-                            <select class="form-select" id="ChristianStatus" required name="Christian&nbsp;Status">
-                                <option value="" disabled selected>Christian status</option>
-                                <option value="New&nbsp;Member">New Member</option>
-                                <option value="New&nbsp;Convert">New Convert/Received Salvation</option>
-                                <option value="Methodist&nbsp;Transfer">Methodist Transfer</option>
-                                <option value="Watch&nbsp;Care">Watch Care</option>
-                                <option value="Returning&nbsp;Member">Returning Bethel Member</option>
-                            </select>
-                            <div class="invalid-feedback">
-                                Please select a valid Christian status.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Request for Methodist Certificate -->
-                    <div class="row mb-3">
-                        <label for="TransferLetter" class="text-center text-muted">If you are transfering from another Methodist church,
-                        do you have a letter of transfer from your previous church?</label>
-                        <div>
-                            <select class="form-select" id="TransferLetter" name="Methodist&nbsp;Transfer&nbsp;Certificate">
-                                <option value="" disabled selected>Methodist Transfer Certificate?</option>
-                                <option value="Yes&nbsp;Transfer&nbsp;Letter">Yes</option>
-                                <option value="No&nbsp;Transfer&nbsp;Letter">No</option>
-                                <option value="Not&nbsp;Applicable">Not Applicable</option>
-                            </select>
-                        </div>
-                    </div>
-
                     <!-- Choose Which Service You Attend -->
                     <div class="row mb-3">
-                        <label for="AttendService" class="col-form-label fs-4 fw-bold">Which Service Do You Attend? *</label>
+                        <label for="AttendService" class="col-form-label fs-4 fw-bold">Which Service Do You Attend?
+                            *</label>
                         <div>
                             <select class="form-select" id="AttendService" name="Attend&nbsp;Service" required>
                                 <option value="" disabled selected>Service Time</option>
@@ -84,7 +53,8 @@
                     <div class="row mb-3">
                         <label for="baptized" class="col-form-label fs-4 fw-bold">Have you been baptized? *</label>
                         <div>
-                            <select class="form-select" id="baptized" name="Baptized" required>
+                            <select class="form-select" id="baptized" name="Baptized" onchange="enableSCS(this)"
+                                required>
                                 <option value="" disabled selected>Baptismal status</option>
                                 <option value="Yes">Baptized</option>
                                 <option value="No">Not Baptized</option>
@@ -93,6 +63,38 @@
                             <div class="invalid-feedback">
                                 Please select a valid baptismal status.
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Membership Status -->
+                    <div class="row mb-3" id="SCS1" style="display:none;">
+                        <label for="SavedChristianStatus" class="col-form-label fs-4 fw-bold">What is your Christian Status? *</label>
+                        <div>
+                            <select class="form-select" id="SavedChristianStatus" name="Christian&nbsp;Status" required onchange="enableSCS1(this)">
+                                <option value="NewConvert" disabled selected>Christian status</option>
+                                <option value="NewMember">New Member</option>
+                                <option value="MethodistTransfer">Methodist Transfer</option>
+                                <option value="WatchCare">Watch Care</option>
+                                <option value="ReturningMember">Returning Bethel Member</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid Christian status.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Request for Methodist Certificate -->
+                    <div class="row mb-3" id="mCert" style="display:none;">
+                        <label for="TransferLetter" class="text-center text-muted">If you are transfering from another
+                            Methodist church,
+                            do you have a letter of transfer from your previous church?</label>
+                        <div>
+                            <select class="form-select" id="TransferLetter"
+                                name="Methodist&nbsp;Transfer&nbsp;Certificate">
+                                <option value="" disabled selected>Methodist Transfer Certificate?</option>
+                                <option value="Yes&nbsp;Transfer&nbsp;Letter">Yes</option>
+                                <option value="No&nbsp;Transfer&nbsp;Letter">No</option>
+                            </select>
                         </div>
                     </div>
 
@@ -110,9 +112,7 @@
                                 <option value="Evang.">Evangelist</option>
                                 <option value="Dr.">Dr. (MD, PhD, etc)</option>
                             </select>
-                            <div class="invalid-feedback">
-                                Please select a valid title.
-                            </div>
+                            <div class="invalid-feedback">Please select a valid title.</div>
                         </div>
                     </div>
 
@@ -148,11 +148,13 @@
                     <div class="row mt-3 mb-3">
                         <div class="input-group mb-3">
                             <span class="input-group-text"><i class="fa fa-home"></i></span>
-                            <input type="text" class="form-control" placeholder="Street Address" id="StreetAddr" name="Street&nbsp;Address">
+                            <input type="text" class="form-control" placeholder="Street Address" id="StreetAddr"
+                                name="Street&nbsp;Address">
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text"><i class="fa fa-home"></i></span>
-                            <input type="text" class="form-control" placeholder="Apt Number" id="AptNum" name="Apt&nbsp;Number">
+                            <input type="text" class="form-control" placeholder="Apt Number" id="AptNum"
+                                name="Apt&nbsp;Number">
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text"><i class="fa fa-home"></i></span>
@@ -237,22 +239,23 @@
                     <div class="row mt-3 mb-3">
                         <div class="input-group">
                             <span class="input-group-text"><i class="fa fa-envelope"></i></span>
-                            <input type="text" class="form-control" placeholder="Email *" id="email" name='Email' required>
+                            <input type="text" class="form-control" placeholder="Email *" id="email" name='Email'
+                                required>
                             <div class="invalid-feedback">Please enter a valid email address.</div>
                         </div>
 
                         <!-- Opt In or Out Question 1 -->
                         <label for="ReceiveEmail" class="col-form-label fw-bold">
                             Would you like to receive emails pertaining to church activities?
-                        </label>                        
-                        <div>                             
+                        </label>
+                        <div>
                             <select class="form-select" id="ReceiveEmail" name="ReceiveEmail">
                                 <option value="" disabled selected>Consent to receive emails</option>
                                 <option value="Yes">Yes</option>
                                 <option value="No">No</option>
                             </select>
                         </div>
-                        
+
                     </div>
 
                     <!-- Contact Phone Information -->
@@ -265,7 +268,7 @@
                             <div class="invalid-feedback">
                                 Please enter a valid mobile phone number.
                             </div>
-                        </div>                    
+                        </div>
 
                         <!-- Contact Alternate Phone Information -->
                         <div class="input-group">
@@ -286,7 +289,7 @@
                                 <option value="No">No</option>
                             </select>
                         </div>
-                        
+
                         <!-- Opt In or Out Question 3 -->
                         <label for="ReceiveText" class="col-form-label fw-bold">
                             Would you like to receive text messages regarding church activities?
@@ -312,28 +315,39 @@
 
                     <!-- Marital Status -->
                     <div class="row mb-3">
-                        <label for="MaritalStatus" class="col-form-label fw-bold">Marital Status:</label>                    
-                        <div>
-                            <select class="form-select" id="MaritalStatus" required>
-                                <option value="" disabled selected>Select your marital status *</option>
-                                <option value="Single">Single</option>
-                                <option value="Married">Married</option>
-                                <option value="Divorced">Divorced</option>
-                                <option value="Widowed">Widowed</option>
-                            </select>
-                            <div class="invalid-feedback">Please select a valid marital status.</div>
-                        </div>
+                        <label class="col-form-label fw-bold">Marital Status: *</label>
+                        <div class="input-group mb-3" id="maritalStatus" name="Marital&nbsp;Status">                            
+                            <span class="input-group-text"><i class="fa-solid fa-ring"></i></span>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" id="single" name="maritalStatus" value="single" required>
+                                <label for="single">Single</label>                                
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" id="married" name="maritalStatus" value="married">
+                                <label for="married">Married</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" id="divorced" name="maritalStatus" value="divorced">
+                                <label for="divorced">Divorced</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" id="widowed" name="maritalStatus" value="widowed">
+                                <label for="widowed">Widowed</label>
+                                <div class="invalid-feedback">Please select a valid marital status.</div>
+                            </div>                            
+                        </div>                                            
                     </div>
 
                     <!-- Spouse Information -->
-                    <div class="row mb-3">
-                        <label class="col-form-label fw-bold">Spouse Information:</label>                    
+                    <div class="row mb-3" id="spouseInfo" style="display:none;">
+                        <label for="SpouseFullName">Spouse Name:</label>
                         <div class="input-group mb-3">
                             <span class="input-group-text"><i class="fa fa-user"></i></span>
                             <input type="text" class="form-control" placeholder="Spouse First & Last Name"
                                 id="SpouseFullName" name="Spouse&nbsp;Full&nbsp;Name" minlength="1" maxlength="49"
                                 size="50">
                         </div>
+                        <label for="PhoneID3">Spouse Phone Number:</label>
                         <div class="input-group mb-3">
                             <span class="input-group-text"><i class="fa fa-phone"></i></span>
                             <input type="text" class="form-control" placeholder="Spouse Phone Number"
@@ -353,16 +367,15 @@
                         <div class="input-group mb-3">
                             <span class="input-group-text"><i class="fa fa-user"></i></span>
                             <input type="text" class="form-control" placeholder="Emergency Contact Full Name *"
-                                id="EmergContactFirstName" name="Emerg&nbsp;Contact&nbsp;First&nbsp;Name"
-                                minlength="1" maxlength="50" required>
+                                id="EmergContactFirstName" name="Emerg&nbsp;Contact&nbsp;First&nbsp;Name" minlength="1"
+                                maxlength="50" required>
                             <div class="invalid-feedback">Please enter a valid emergency contact name.</div>
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text"><i class="fa fa-phone"></i></span>
                             <input type="text" class="form-control" placeholder="Emergency Contact Phone Number *"
                                 pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" id="PhoneID4"
-                                name="Emerg&nbsp;Contact&nbsp;Phone&nbsp;Number" minlength="10" maxlength="14"
-                                required>
+                                name="Emerg&nbsp;Contact&nbsp;Phone&nbsp;Number" minlength="10" maxlength="14" required>
                             <div class="invalid-feedback">Please enter a valid emergency contact phone number.</div>
                         </div>
                         <div class="input-group mb-3">
@@ -388,8 +401,8 @@
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text"><i class="fa fa-briefcase"></i></span>
-                            <input type="text" class="form-control" placeholder="Occupation / Job Title"
-                                id="Occupation" name="Occupation">
+                            <input type="text" class="form-control" placeholder="Occupation / Job Title" id="Occupation"
+                                name="Occupation">
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text"><i class="fa fa-briefcase"></i></span>
@@ -409,8 +422,8 @@
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text"><i class="fa fa-pencil"></i></span>
-                            <input type="text" class="form-control" placeholder="Spiritual Gifts"
-                                id="SpiritualGifts" name="Spiritual&nbsp;Gifts">
+                            <input type="text" class="form-control" placeholder="Spiritual Gifts" id="SpiritualGifts"
+                                name="Spiritual&nbsp;Gifts">
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text"><i class="fa fa-pencil"></i></span>
@@ -419,9 +432,22 @@
                         </div>
                     </div>
 
-                    <!-- Additional Household Information 1 -->
-                    <label class="col-form-label fw-bold">Additional Household Information:</label>
+                    <!-- Additional Family Information -->
                     <div class="row mb-3">
+                        <label for="addFamInfo" class="col-form-label fs-4 fw-bold">Would you like to add more family
+                            members? *</label>
+                        <div>
+                            <select class="form-select" id="addFamInfo" name="addFamInfo" onchange="enableAFI(this)" required>
+                                <option value="" disabled selected>Additional Household Members?</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                            <div class="invalid-feedback">Please select a valid option.</div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Household Information 1 -->
+                    <div class="row mb-3" id="AFI1" style="display:none;">
                         <p class="fst-italic">First Household Member (optional)</p>
                         <div class="input-group mb-3">
                             <span class="input-group-text"><i class="fa fa-user"></i></span>
@@ -454,7 +480,7 @@
                     </div>
 
                     <!-- Additional Household Information 2 -->
-                    <div class="row mb-3">
+                    <div class="row mb-3" id="AFI2" style="display:none;">
                         <p class="fst-italic">Second Household Member (optional)</p>
                         <div class="input-group mb-3">
                             <span class="input-group-text"><i class="fa fa-user"></i></span>
@@ -487,7 +513,7 @@
                     </div>
 
                     <!-- Additional Household Information 3 -->
-                    <div class="row mb-3">
+                    <div class="row mb-3" id="AFI3" style="display:none;">
                         <p class="fst-italic">Third Household Member (optional)</p>
                         <div class="input-group mb-3">
                             <span class="input-group-text"><i class="fa fa-user"></i></span>
@@ -520,7 +546,7 @@
                     </div>
 
                     <!-- Additional Household Information 4 -->
-                    <div class="row mb-3">
+                    <div class="row mb-3" id="AFI4" style="display:none;">
                         <p class="fst-italic">Fourth Household Member (optional)</p>
                         <div class="input-group mb-3">
                             <span class="input-group-text"><i class="fa fa-user"></i></span>
@@ -561,15 +587,17 @@
                             platforms.
                             <br><br>
                             This includes Bethel AME Church's social media accounts, i.e.: YouTube channel,
-                            Facebook, Instagram, X (formely Twitter), internal and external Bethel electronics, print 
+                            Facebook, Instagram, X (formely Twitter), internal and external Bethel electronics, print
                             publication and websites.
                             <br><br>
                             This authorization is irrevocable, and waives all rights, claims, and demands against
-                            the AME Church in connection with or arising out of the reproduction, publication or other 
-                            use of photograph or other physical images of you.                            
+                            the AME Church in connection with or arising out of the reproduction, publication or other
+                            use of photograph or other physical images of you.
                         </p>
-                        <p class="fst-italic wrap">If you choose to opt-out in the future, please send an email declining the use of your image to the church 
-                            office at <a href="mailto:info@bethelwilmg.org?subject=Opt%20Out%20Image%20Consent">Bethel Church Admin</a>.
+                        <p class="fst-italic wrap">If you choose to opt-out in the future, please send an email
+                            declining the use of your image to the church
+                            office at <a href="mailto:info@bethelwilmg.org?subject=Opt%20Out%20Image%20Consent">Bethel
+                                Church Admin</a>.
                         </p>
                     </div>
 
@@ -580,7 +608,7 @@
                         <button class="btn btn-danger btn-sm" type="reset" value="Reset">Reset</button>
                     </div>
 
-                <!-- Form Close -->
+                    <!-- Form Close -->
                 </form>
             </div>
         </div>
